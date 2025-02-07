@@ -22,7 +22,7 @@
 				<!-- Breadcrumb -->
 				<div class="d-md-flex d-block align-items-center justify-content-between page-breadcrumb mb-3">
 					<div class="my-auto mb-2">
-						<h2 class="mb-1">Companies</h2>
+						<h2 class="mb-1">School</h2>
 						<nav>
 							<ol class="breadcrumb mb-0">
 								<li class="breadcrumb-item">
@@ -31,7 +31,7 @@
 								<li class="breadcrumb-item">
 									Application
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Companies List</li>
+								<li class="breadcrumb-item active" aria-current="page">School List</li>
 							</ol>
 						</nav>
 					</div>
@@ -52,7 +52,7 @@
 							</div>
 						</div>
 						<div class="mb-2">
-							<a href="#" data-bs-toggle="modal" data-bs-target="#add_company" class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Add Company</a>
+							<a href="#" data-bs-toggle="modal" data-bs-target="#add_company" class="btn btn-primary d-flex align-items-center"><i class="ti ti-circle-plus me-2"></i>Add School</a>
 						</div>
 						<div class="ms-2 head-icons">
 							<a href="javascript:void(0);" class="" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Collapse" id="collapse-header">
@@ -74,7 +74,7 @@
 										<i class="ti ti-building fs-16"></i>
 									</span>
 									<div class="ms-2 overflow-hidden">
-										<p class="fs-12 fw-medium mb-1 text-truncate">Total Companies</p>
+										<p class="fs-12 fw-medium mb-1 text-truncate">Total School</p>
 										<h4>950</h4>
 									</div>
 								</div>
@@ -93,7 +93,7 @@
 										<i class="ti ti-building fs-16"></i>
 									</span>
 									<div class="ms-2 overflow-hidden">
-										<p class="fs-12 fw-medium mb-1 text-truncate">Active Companies</p>
+										<p class="fs-12 fw-medium mb-1 text-truncate">Active School</p>
 										<h4>920</h4>
 									</div>
 								</div>
@@ -112,7 +112,7 @@
 										<i class="ti ti-building fs-16"></i>
 									</span>
 									<div class="ms-2 overflow-hidden">
-										<p class="fs-12 fw-medium mb-1 text-truncate">Inactive Companies</p>
+										<p class="fs-12 fw-medium mb-1 text-truncate">Inactive School</p>
 										<h4>30</h4>
 									</div>
 								</div>
@@ -131,7 +131,7 @@
 										<i class="ti ti-map-pin-check fs-16"></i>
 									</span>
 									<div class="ms-2 overflow-hidden">
-										<p class="fs-12 fw-medium mb-1 text-truncate">Company Location</p>
+										<p class="fs-12 fw-medium mb-1 text-truncate">School Location</p>
 										<h4>180</h4>
 									</div>
 								</div>
@@ -617,8 +617,8 @@
 			</div>
 
 			<div class="footer d-sm-flex align-items-center justify-content-between border-top bg-white p-3">
-				<p class="mb-0">2014 - 2025 &copy; SmartHR.</p>
-				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Dreams</a></p>
+				<p class="mb-0">2014 - 2025 &copy; Go School.</p>
+				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Go School</a></p>
 			</div>
 
 		</div>
@@ -629,7 +629,7 @@
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Add New Company</h4>
+						<h4 class="modal-title">Add School</h4>
 						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
 							<i class="ti ti-x"></i>
 						</button>
@@ -640,7 +640,7 @@
 								<div class="col-md-12">
 									<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
 										<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-											<img src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
+											<img id="img" src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
 										</div>
 										<div class="profile-upload">
 											<div class="mb-2">
@@ -688,24 +688,7 @@
 										<input name="website" type="text" class="form-control">
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Password <span class="text-danger"> *</span></label>
-										<div class="pass-group">
-											<input name="password" type="password" class="pass-input form-control">
-											<span class="ti toggle-password ti-eye-off"></span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
-										<div class="pass-group">
-											<input name="confirm_password" type="password" class="pass-inputs form-control">
-											<span class="ti toggle-passwords ti-eye-off"></span>
-										</div>
-									</div>
-								</div>
+
 								<div class="col-md-12">
 									<div class="mb-3">
 										<label class="form-label">Address</label>
@@ -717,7 +700,7 @@
 										<label class="form-label">Plan Name <span class="text-danger"> *</span></label>
 										<select name="plan_name" class="select">
 											<option value="">Select</option>
-											<option value="advance">Advanced</option>
+											<option value="advanced">Advanced</option>
 											<option value="basic">Basic</option>
 											<option value="enterprise">Enterprise</option>
 										</select>
@@ -767,7 +750,7 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-light me-2" data-bs-dismiss="modal">Cancel</button>
-							<button type="submit" class="btn btn-primary">Add Company</button>
+							<button type="submit" class="btn btn-primary">Add School</button>
 						</div>
 					</form>
 				</div>
@@ -780,7 +763,7 @@
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h4 class="modal-title">Edit Company</h4>
+						<h4 class="modal-title">Edit School</h4>
 						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
 							<i class="ti ti-x"></i>
 						</button>
@@ -839,24 +822,7 @@
 										<input type="text" class="form-control" value="Admin Website">
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Password <span class="text-danger"> *</span></label>
-										<div class="pass-group">
-											<input type="password" class="pass-input form-control" value="123">
-											<span class="ti toggle-password ti-eye-off"></span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
-										<div class="pass-group">
-											<input type="password" class="pass-inputs form-control" value="123">
-											<span class="ti toggle-passwords ti-eye-off"></span>
-										</div>
-									</div>
-								</div>
+
 								<div class="col-md-12">
 									<div class="mb-3">
 										<label class="form-label">Address</label>

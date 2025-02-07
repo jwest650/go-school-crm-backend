@@ -57,10 +57,10 @@
                     <div class=" d-flex align-items-center justify-content-between flex-wrap">
                         <div class="mb-3">
                             <h2 class="mb-1 text-white">Welcome Back, <?php echo $_SESSION['name'] ?></h2>
-                            <p class="text-light">14 New Companies Subscribed Today !!!</p>
+                            <p class="text-light">14 New Schools Subscribed Today !!!</p>
                         </div>
                         <div class="d-flex align-items-center flex-wrap mb-1">
-                            <a href="companies.php" class="btn btn-dark btn-md me-2 mb-2">Companies</a>
+                            <a href="companies.php" class="btn btn-dark btn-md me-2 mb-2">Schools</a>
                             <a href="packages.php" class="btn btn-light btn-md mb-2">All Packages</a>
                         </div>
                     </div>
@@ -667,6 +667,9 @@
     <script src="assets/plugins/peity/jquery.peity.min.js"></script>
     <script src="assets/plugins/peity/chart-data.js"></script>
 
+    <script>
+
+    </script>
 </body>
 
 </html>

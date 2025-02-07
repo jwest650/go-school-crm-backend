@@ -10,7 +10,7 @@ $password = htmlspecialchars($_POST['password']);
 try {
     $database = new Database();
     $db = $database->connect();
-    $sql = "SELECT name,role,status,last_login FROM admins where name=:name and password=:password";
+    $sql = "SELECT name,role,status,last_login,id,email,profile FROM admins where name=:name and password=:password";
     $smt = $db->prepare($sql);
     $smt->bindParam(':name', $name);
     $smt->bindParam(':password', $password);

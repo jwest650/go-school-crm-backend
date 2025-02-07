@@ -68,7 +68,10 @@
 											</div>
 
 											<div class="mb-3">
-												<button id='signin' type="submit" class="btn btn-primary w-100">Sign In</button>
+												<button id='signin' type="submit" class="btn btn-primary w-100 d-flex justify-content-center alig-items-center text-capitalize  ">
+													<span>sign in</span>
+													<div class=""></div>
+												</button>
 											</div>
 
 

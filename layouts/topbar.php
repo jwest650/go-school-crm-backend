@@ -1162,7 +1162,7 @@
 								<a href="javascript:void(0);" class="dropdown-toggle d-flex align-items-center"
 									data-bs-toggle="dropdown">
 									<span class="avatar avatar-sm online">
-										<img src="assets/img/profiles/avatar-12.jpg" alt="Img" class="img-fluid rounded-circle">
+										<img src="<?php echo 'api/' . $_SESSION['profile']; ?>" alt="Img" class="img-fluid rounded-circle">
 									</span>
 								</a>
 								<div class="dropdown-menu shadow-none">
@@ -1170,11 +1170,11 @@
 										<div class="card-header">
 											<div class="d-flex align-items-center">
 												<span class="avatar avatar-lg me-2 avatar-rounded">
-													<img src="assets/img/profiles/avatar-12.jpg" alt="img">
+													<img src="<?php echo 'api/' . $_SESSION['profile']; ?>" alt="img">
 												</span>
 												<div>
-													<h5 class="mb-0">Kevin Larry</h5>
-													<p class="fs-12 fw-medium mb-0">warren@example.com</p>
+													<h5 class="mb-0"><?php echo $_SESSION['name'] ?></h5>
+													<p class="fs-12 fw-medium mb-0"><?php echo $_SESSION['email'] ?></p>
 												</div>
 											</div>
 										</div>
@@ -1196,7 +1196,7 @@
 											</a>
 										</div>
 										<div class="card-footer">
-											<a class="dropdown-item d-inline-flex align-items-center p-0 py-2" href="login.php">
+											<a  class="dropdown-item d-inline-flex align-items-center p-0 py-2" href="login.php">
 												<i class="ti ti-login me-2"></i>Logout
 											</a>
 										</div>
@@ -1220,3 +1220,5 @@
 			</div>
 		</div>
 		<!-- /Header -->
+
+		

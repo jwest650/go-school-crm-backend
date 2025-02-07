@@ -1,18 +1,20 @@
 <?php include 'layouts/session.php'; ?>
 <?php include 'layouts/head-main.php'; ?>
+
 <head>
-<title>Form Mask - HRMS admin template</title>
- <?php include 'layouts/title-meta.php'; ?>
- <?php include 'layouts/head-css.php'; ?>
+	<title>Form Mask - HRMS admin template</title>
+	<?php include 'layouts/title-meta.php'; ?>
+	<?php include 'layouts/head-css.php'; ?>
 </head>
+
 <body>
-<div id="global-loader">
+	<div id="global-loader">
 		<div class="page-loader"></div>
 	</div>
-    <div class="main-wrapper">
-    <?php include 'layouts/menu.php'; ?>
-<!-- Page Wrapper -->
-<div class="page-wrapper">
+	<div class="main-wrapper">
+		<?php include 'layouts/menu.php'; ?>
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
 			<div class="content">
 
 				<!-- Breadcrumb -->
@@ -69,15 +71,15 @@
 					<div class="card-body d-flex align-items-center justify-content-between flex-wrap pb-1">
 						<div class="d-flex align-items-center mb-3">
 							<span class="avatar avatar-xl flex-shrink-0">
-								<img src="assets/img/profiles/avatar-31.jpg" class="rounded-circle" alt="img">
+								<img src="<?php echo isset($_SESSION['profile']) ? 'api/' . $_SESSION['profile'] : 'assets/img/profiles/avatar-31.jpg'  ?>" class="rounded-circle" alt="img">
 							</span>
 							<div class="ms-3">
-								<h3 class="mb-2">Welcome Back, Adrian <a href="javascript:void(0);" class="edit-icon"><i class="ti ti-edit fs-14"></i></a></h3>
+								<h3 class="mb-2">Welcome Back, <?php echo $_SESSION['name'] ?> <a href="profile.php" class="edit-icon"><i class="ti ti-edit fs-14"></i></a></h3>
 								<p>You have <span class="text-primary text-decoration-underline">21</span> Pending Approvals & <span class="text-primary text-decoration-underline">14</span> Leave Requests</p>
 							</div>
 						</div>
 						<div class="d-flex align-items-center flex-wrap mb-1">
-							<a href="#" class="btn btn-secondary btn-md me-2 mb-2" data-bs-toggle="modal" data-bs-target="#add_project"><i class="ti ti-square-rounded-plus me-1"></i>Add Project</a>
+							<a href="#" class="btn btn-secondary btn-md me-2 mb-2" data-bs-toggle="modal" data-bs-target="#add_teacher"><i class="ti ti-square-rounded-plus me-1"></i>Add Teacher</a>
 							<a href="#" class="btn btn-primary btn-md mb-2" data-bs-toggle="modal" data-bs-target="#add_leaves"><i class="ti ti-square-rounded-plus me-1"></i>Add Requests</a>
 						</div>
 					</div>
@@ -107,7 +109,7 @@
 										<span class="avatar rounded-circle bg-secondary mb-2">
 											<i class="ti ti-browser fs-16"></i>
 										</span>
-										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Project's</h6>
+										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Guardians</h6>
 										<h3 class="mb-3">90/125 <span class="fs-12 fw-medium text-danger"><i class="fa-solid fa-caret-down me-1"></i>-2.1%</span></h3>
 										<a href="projects.php" class="link-default">View All</a>
 									</div>
@@ -119,7 +121,7 @@
 										<span class="avatar rounded-circle bg-info mb-2">
 											<i class="ti ti-users-group fs-16"></i>
 										</span>
-										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Clients</h6>
+										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Students</h6>
 										<h3 class="mb-3">69/86 <span class="fs-12 fw-medium text-danger"><i class="fa-solid fa-caret-down me-1"></i>-11.2%</span></h3>
 										<a href="clients.php" class="link-default">View All</a>
 									</div>
@@ -131,7 +133,7 @@
 										<span class="avatar rounded-circle bg-pink mb-2">
 											<i class="ti ti-checklist fs-16"></i>
 										</span>
-										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Tasks</h6>
+										<h6 class="fs-13 fw-medium text-default mb-1">Total No of Teachers</h6>
 										<h3 class="mb-3">225/28 <span class="fs-12 fw-medium text-success"><i class="fa-solid fa-caret-down me-1"></i>+11.2%</span></h3>
 										<a href="tasks.php" class="link-default">View All</a>
 									</div>
@@ -167,7 +169,7 @@
 										<span class="avatar rounded-circle bg-success mb-2">
 											<i class="ti ti-users-group fs-16"></i>
 										</span>
-										<h6 class="fs-13 fw-medium text-default mb-1">Job Applicants</h6>
+										<h6 class="fs-13 fw-medium text-default mb-1">Department</h6>
 										<h3 class="mb-3">98 <span class="fs-12 fw-medium text-success"><i class="fa-solid fa-caret-up me-1"></i>+2.1%</span></h3>
 										<a href="job-list.php" class="link-default">View All</a>
 									</div>
@@ -179,7 +181,7 @@
 										<span class="avatar rounded-circle bg-dark mb-2">
 											<i class="ti ti-user-star fs-16"></i>
 										</span>
-										<h6 class="fs-13 fw-medium text-default mb-1">New Hire</h6>
+										<h6 class="fs-13 fw-medium text-default mb-1">Student attendance</h6>
 										<h3 class="mb-3">45/48 <span class="fs-12 fw-medium text-danger"><i class="fa-solid fa-caret-down me-1"></i>-11.2%</span></h3>
 										<a href="candidates.php" class="link-default">View All</a>
 									</div>
@@ -648,7 +650,7 @@
 						</div>
 					</div>
 					<!-- /Jobs Applicants -->
-					
+
 					<!-- Employees -->
 					<div class="col-xxl-4 col-xl-6 d-flex">
 						<div class="card flex-fill">
@@ -657,7 +659,7 @@
 								<a href="employees.php" class="btn btn-light btn-md mb-2">View All</a>
 							</div>
 							<div class="card-body p-0">
-								<div class="table-responsive">	
+								<div class="table-responsive">
 									<table class="table table-nowrap mb-0">
 										<thead>
 											<tr>
@@ -755,7 +757,7 @@
 						</div>
 					</div>
 					<!-- /Employees -->
-					
+
 					<!-- Todo -->
 					<div class="col-xxl-4 col-xl-6 d-flex">
 						<div class="card flex-fill">
@@ -778,7 +780,7 @@
 											</li>
 										</ul>
 									</div>
-									<a href="#" class="btn btn-primary btn-icon btn-xs rounded-circle d-flex align-items-center justify-content-center p-0 mb-2"  data-bs-toggle="modal" data-bs-target="#add_todo"><i class="ti ti-plus fs-16"></i></a>
+									<a href="#" class="btn btn-primary btn-icon btn-xs rounded-circle d-flex align-items-center justify-content-center p-0 mb-2" data-bs-toggle="modal" data-bs-target="#add_todo"><i class="ti ti-plus fs-16"></i></a>
 								</div>
 							</div>
 							<div class="card-body">
@@ -793,7 +795,7 @@
 									<i class="ti ti-grid-dots me-2"></i>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="todo2">
-										<label class="form-check-label fw-medium" for="todo2">Add Meeting  to Client</label>
+										<label class="form-check-label fw-medium" for="todo2">Add Meeting to Client</label>
 									</div>
 								</div>
 								<div class="d-flex align-items-center todo-item border p-2 br-5 mb-2">
@@ -832,7 +834,7 @@
 				</div>
 
 				<div class="row">
-					
+
 					<!-- Sales Overview -->
 					<div class="col-xl-7 d-flex">
 						<div class="card flex-fill">
@@ -854,7 +856,7 @@
 												<a href="javascript:void(0);" class="dropdown-item rounded-1">Junior Tester</a>
 											</li>
 										</ul>
-									</div>	
+									</div>
 								</div>
 							</div>
 							<div class="card-body pb-0">
@@ -870,7 +872,7 @@
 						</div>
 					</div>
 					<!-- /Sales Overview -->
-					
+
 					<!-- Invoices -->
 					<div class="col-xl-5 d-flex">
 						<div class="card flex-fill">
@@ -894,7 +896,7 @@
 										</ul>
 									</div>
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -912,7 +914,7 @@
 								</div>
 							</div>
 							<div class="card-body pt-2">
-								<div class="table-responsive pt-1">	
+								<div class="table-responsive pt-1">
 									<table class="table table-nowrap table-borderless mb-0">
 										<tbody>
 											<tr>
@@ -1027,7 +1029,7 @@
 				</div>
 
 				<div class="row">
-					
+
 					<!-- Projects -->
 					<div class="col-xxl-8 col-xl-7 d-flex">
 						<div class="card flex-fill">
@@ -1035,7 +1037,7 @@
 								<h5 class="mb-2">Projects</h5>
 								<div class="d-flex align-items-center">
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -1053,7 +1055,7 @@
 								</div>
 							</div>
 							<div class="card-body p-0">
-								<div class="table-responsive">	
+								<div class="table-responsive">
 									<table class="table table-nowrap mb-0">
 										<thead>
 											<tr>
@@ -1068,7 +1070,9 @@
 										<tbody>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-001</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Office Management App</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Office Management App</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1097,7 +1101,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-002</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Clinic Management </a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Clinic Management </a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1129,7 +1135,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-003</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Educational Platform</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Educational Platform</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1158,7 +1166,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-004</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Chat & Call Mobile App</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Chat & Call Mobile App</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1187,7 +1197,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-005</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1216,7 +1228,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-006</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Service Booking Software</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Service Booking Software</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1245,7 +1259,9 @@
 											</tr>
 											<tr>
 												<td class="border-0"><a href="project-details.php" class="link-default">PRO-008</a></td>
-												<td class="border-0"><h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6></td>
+												<td class="border-0">
+													<h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6>
+												</td>
 												<td class="border-0">
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1290,7 +1306,7 @@
 								<h5 class="mb-2">Tasks Statistics</h5>
 								<div class="d-flex align-items-center">
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -1644,7 +1660,7 @@
 											<option>Internal</option>
 											<option>Projects</option>
 											<option>Meetings</option>
-											<option>Reminder</option> 	 
+											<option>Reminder</option>
 										</select>
 									</div>
 								</div>
@@ -1701,14 +1717,14 @@
 		</div>
 		<!-- /Add Todo -->
 
-		<!-- Add Project -->
-		<div class="modal fade" id="add_project" role="dialog">
+		<!-- Add Teacher -->
+		<div class="modal fade" id="add_teacher" role="dialog">
 			<div class="modal-dialog modal-dialog-centered">
 				<div class="modal-content">
 					<div class="modal-header header-border align-items-center justify-content-between">
 						<div class="d-flex align-items-center">
-							<h5 class="modal-title me-2">Add Project </h5>
-							<p class="text-dark">Project ID : PRO-0004</p>
+							<h5 class="modal-title me-2">Add Teacher</h5>
+
 						</div>
 						<button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close">
 							<i class="ti ti-x"></i>
@@ -1720,20 +1736,18 @@
 								<li class="active p-2 pt-0">
 									<h6 class="fw-medium">Basic Information</h6>
 								</li>
-								<li class="p-2 pt-0">									
-									<h6 class="fw-medium">Members</h6>
-								</li>
+
 							</ul>
 						</div>
 						<fieldset id="first-field-file">
-							<form action="projects.php">
+							<form id="teacher_form" action="teachers.php">
 								<div class="modal-body">
 									<div class="row">
 										<div class="col-md-12">
-											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
+											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
 												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
 													<i class="ti ti-photo text-gray-2 fs-16"></i>
-												</div>                                              
+												</div>
 												<div class="profile-upload">
 													<div class="mb-2">
 														<h6 class="mb-1">Upload Project Logo</h6>
@@ -1742,28 +1756,25 @@
 													<div class="profile-uploader d-flex align-items-center">
 														<div class="drag-upload-btn btn btn-sm btn-primary me-2">
 															Upload
-															<input type="file" class="form-control image-sign" multiple="">
+															<input name="profile" type="file" class="form-control image-sign" multiple="">
 														</div>
 														<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 													</div>
-													
+
 												</div>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="mb-3">
-												<label class="form-label">Project Name</label>
-												<input type="text" class="form-control">
+												<label class="form-label">First Name</label>
+												<input name="name" type="text" class="form-control">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="mb-3">
-												<label class="form-label">Client</label>
-												<select class="select">
-													<option>Select</option>
-													<option>Anthony Lewis</option>
-													<option>Brian Villalobos</option>
-												</select>
+												<label class="form-label">Last Name</label>
+												<input name="last_name" type="text" class="form-control">
+
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -1772,7 +1783,7 @@
 													<div class="mb-3">
 														<label class="form-label">Start Date</label>
 														<div class="input-icon-end position-relative">
-															<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
+															<input name="start_date" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
 															<span class="input-icon-addon">
 																<i class="ti ti-calendar text-gray-7"></i>
 															</span>
@@ -1783,7 +1794,7 @@
 													<div class="mb-3">
 														<label class="form-label">End Date</label>
 														<div class="input-icon-end position-relative">
-															<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
+															<input name="end_date" type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy" value="02-05-2024">
 															<span class="input-icon-addon">
 																<i class="ti ti-calendar text-gray-7"></i>
 															</span>
@@ -1792,105 +1803,35 @@
 												</div>
 												<div class="col-md-6">
 													<div class="mb-3">
-														<label class="form-label">Priority</label>
-														<select class="select">
-															<option>Select</option>
-															<option>High</option>
-															<option>Medium</option>
-															<option>Low</option>
+														<label class="form-label">Department</label>
+														<select name="department" class="select">
+															<option value="">Select</option>
+															<?php
+															$departments = ['science', 'english', 'maths'];
+															foreach ($departments as $department) {
+																echo "<option>$department</option>";
+															}
+
+
+															?>
 														</select>
 													</div>
 												</div>
-												<div class="col-md-6">
-													<div class="mb-3">
-														<label class="form-label">Project Value</label>
-														<input type="text" class="form-control" value="$">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="mb-3">
-														<label class="form-label">Total Working Hours</label>
-														<div class="input-icon-end position-relative">
-															<input type="text" class="form-control timepicker" placeholder="-- : -- : --" value="02-05-2024">
-															<span class="input-icon-addon">
-																<i class="ti ti-clock-hour-3 text-gray-7"></i>
-															</span>
-														</div>
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="mb-3">
-														<label class="form-label">Extra Time</label>
-														<input type="text" class="form-control">
-													</div>
-												</div>
+
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="mb-0">
 												<label class="form-label">Description</label>
-												<div class="summernote"></div>
+												<textarea name='description' class="summernote"></textarea>
 											</div>
 										</div>
-									</div>								
-								</div>
-								<div class="modal-footer">
-									<div class="d-flex align-items-center justify-content-end">
-										<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
-										<button class="btn btn-primary wizard-next-btn" type="button">Add Team Member</button>
 									</div>
 								</div>
-							</form>
-						</fieldset>
-						<fieldset>
-							<form action="projects.php">
-								<div class="modal-body">
-									<div class="row">
-										<div class="col-md-12">
-											<div class="mb-3">
-												<label class="form-label me-2">Team Members</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Jerald,Andrew,Philip,Davis">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="mb-3">
-												<label class="form-label me-2">Team Leader</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Hendry,James">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="mb-3">
-												<label class="form-label me-2">Project Manager</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Dwight">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="mb-3">
-												<label class="form-label">Status</label>
-												<select class="select">
-													<option>Select</option>
-													<option>Active</option>
-													<option>Inactive</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div>
-												<label class="form-label">Tags</label>
-												<select class="select">
-													<option>Select</option>
-													<option>High</option>
-													<option>Low</option>
-													<option>Medium</option>
-												</select>
-											</div>
-										</div>
-									</div>								
-								</div>
 								<div class="modal-footer">
 									<div class="d-flex align-items-center justify-content-end">
 										<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
-										<button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#success_modal">Save</button>
+										<button id="save_teacher" class="btn btn-primary " type="submit">Save</button>
 									</div>
 								</div>
 							</form>
@@ -1923,7 +1864,7 @@
 											<option>Brian Villalobos</option>
 											<option>Harvey Smith</option>
 										</select>
-									</div>	
+									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="mb-3">
@@ -1934,30 +1875,30 @@
 											<option>Casual Leave</option>
 											<option>Annual Leave</option>
 										</select>
-									</div>	
+									</div>
 								</div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">From </label>
-                                        <div class="input-icon-end position-relative">
-                                            <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
-                                            <span class="input-icon-addon">
-                                                <i class="ti ti-calendar text-gray-7"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">To </label>
-                                        <div class="input-icon-end position-relative">
-                                            <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
-                                            <span class="input-icon-addon">
-                                                <i class="ti ti-calendar text-gray-7"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>   
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label">From </label>
+										<div class="input-icon-end position-relative">
+											<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+											<span class="input-icon-addon">
+												<i class="ti ti-calendar text-gray-7"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label">To </label>
+										<div class="input-icon-end position-relative">
+											<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+											<span class="input-icon-addon">
+												<i class="ti ti-calendar text-gray-7"></i>
+											</span>
+										</div>
+									</div>
+								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">No of Days</label>
@@ -1989,15 +1930,17 @@
 		<!-- /Add Leaves -->
 
 
-    </div>
-<!-- end main wrapper-->
-<!-- JAVASCRIPT -->
-<?php include 'layouts/vendor-scripts.php'; ?>
-<script src="assets/js/todo.js"></script>
-<!-- Bootstrap Tagsinput JS -->
-<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-<!-- Chart JS -->
-<script src="assets/plugins/chartjs/chart.min.js"></script>
-<script src="assets/plugins/chartjs/chart-data.js"></script>
+	</div>
+	<!-- end main wrapper-->
+	<!-- JAVASCRIPT -->
+	<?php include 'layouts/vendor-scripts.php'; ?>
+	<script src="assets/js/todo.js"></script>
+	<script src="assets/js/admin-dashboard.js"></script>
+	<!-- Bootstrap Tagsinput JS -->
+	<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+	<!-- Chart JS -->
+	<script src="assets/plugins/chartjs/chart.min.js"></script>
+	<script src="assets/plugins/chartjs/chart-data.js"></script>
 </body>
+
 </html>

@@ -78,7 +78,7 @@
 								<div class="d-flex align-items-center overflow-hidden">
 									<div>
 										<p class="fs-12 fw-medium mb-1 text-truncate">Total Plans</p>
-										<h4>08</h4>
+										<h4 id="total_plans">0</h4>
 									</div>
 								</div>
 								<div>
@@ -98,7 +98,7 @@
 								<div class="d-flex align-items-center overflow-hidden">
 									<div>
 										<p class="fs-12 fw-medium mb-1 text-truncate">Active Plans</p>
-										<h4>08</h4>
+										<h4 id="total_active_plans">0</h4>
 									</div>
 								</div>
 								<div>
@@ -118,7 +118,7 @@
 								<div class="d-flex align-items-center overflow-hidden">
 									<div>
 										<p class="fs-12 fw-medium mb-1 text-truncate">Inactive Plans</p>
-										<h4>0</h4>
+										<h4 id="total_inactive_plans">0</h4>
 									</div>
 								</div>
 								<div>
@@ -138,7 +138,7 @@
 								<div class="d-flex align-items-center overflow-hidden">
 									<div>
 										<p class="fs-12 fw-medium mb-1 text-truncate">No of Plan Types</p>
-										<h4>02</h4>
+										<h4 id="total_plans_type">0</h4>
 									</div>
 								</div>
 								<div>
@@ -234,207 +234,7 @@
 										<th></th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Basic</a></h6>
-										</td>
-										<td>Monthly</td>
-										<td>56</td>
-										<td>$50</td>
-										<td>14 Jan 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Advanced</a></h6>
-										</td>
-										<td>Monthly</td>
-										<td>99</td>
-										<td>$200</td>
-										<td>21 Jan 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Premium</a></h6>
-										</td>
-										<td>Monthly</td>
-										<td>58</td>
-										<td>$300</td>
-										<td>10 Feb 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Enterprise</a></h6>
-										</td>
-										<td>Monthly</td>
-										<td>67</td>
-										<td>$400</td>
-										<td>18 Feb 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Basic</a></h6>
-										</td>
-										<td>Yearly</td>
-										<td>78</td>
-										<td>$600</td>
-										<td>15 Mar 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Advanced</a></h6>
-										</td>
-										<td>Yearly</td>
-										<td>99</td>
-										<td>$2400</td>
-										<td>26 Mar 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Premium</a></h6>
-										</td>
-										<td>Yearly</td>
-										<td>48</td>
-										<td>$3600</td>
-										<td>05 Apr 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<h6 class="fw-medium"><a href="#">Enterprise</a></h6>
-										</td>
-										<td>Yearly</td>
-										<td>17</td>
-										<td>$4800</td>
-										<td>16 Apr 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_plans"><i class="ti ti-edit"></i></a>
-												<a href="#" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
+								<tbody id="packages_table">
 								</tbody>
 							</table>
 						</div>
@@ -444,15 +244,15 @@
 			</div>
 
 			<div class="footer d-sm-flex align-items-center justify-content-between border-top bg-white p-3">
-				<p class="mb-0">2014 - 2025 &copy; SmartHR.</p>
-				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Dreams</a></p>
+				<p class="mb-0">2014 - 2025 &copy; Go School.</p>
+				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Go School</a></p>
 			</div>
 
 		</div>
 		<!-- /Page Wrapper -->
 
 		<!-- Add Plan -->
-		<div  class="modal fade" id="add_plans">
+		<div class="modal fade" id="add_plans">
 			<div class="modal-dialog modal-dialog-centered modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -461,13 +261,13 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<form id="packages_form" enctype="multipart/form-data" action="packages.php">
+					<form id="packages_form" enctype="multipart/form-data">
 						<div class="modal-body pb-0">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
 										<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-											<img src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
+											<img id="img" src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
 										</div>
 										<div class="profile-upload">
 											<div class="mb-2">
@@ -506,17 +306,7 @@
 										</select>
 									</div>
 								</div>
-								<!-- <div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Plan Position<span class="text-danger"> *</span></label>
-										<select name="plan_position" class="select">
-											<option value="">Select</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-										</select>
-									</div>
-								</div> -->
+
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Currency<span class="text-danger"> *</span></label>
@@ -556,30 +346,38 @@
 									<div class="mb-3 ">
 										<label class="form-label">Discount<span class="text-danger"> *</span></label>
 										<div class="pass-group">
-											<input name="discount" type="number" class="form-control">
+											<input name="discount" type="text" class="form-control">
 										</div>
 									</div>
 								</div>
 								<div class="col-md-3">
-										<div class="d-flex align-items-center mb-3">
-											<div class="flex-fill">
-												<label class="form-label">Trial Days</label>
-												<input name="trial" type="text" class="form-control">
-											</div>
+									<div class="mb-3 ">
+										<label class="form-label">Price<span class="text-danger"> *</span></label>
+										<div class="pass-group">
+											<input name="price" type="number" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="d-flex align-items-center mb-3">
+										<div class="flex-fill">
+											<label class="form-label">Trial Days</label>
+											<input name="trial" type="text" class="form-control">
+										</div>
 
-										</div>
 									</div>
-								
-									<div class="col-md-3">
-										<div class="mb-3 ">
-											<label class="form-label">Status<span class="text-danger"> *</span></label>
-											<select name="status" class="select">
-												<option value="">Select</option>
-												<option value="active">Active</option>
-												<option value="inactive">Inactive</option>
-											</select>
-										</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="mb-3 ">
+										<label class="form-label">Status<span class="text-danger"> *</span></label>
+										<select name="status" class="select">
+											<option value="">Select</option>
+											<option value="active">Active</option>
+											<option value="inactive">Inactive</option>
+										</select>
 									</div>
+								</div>
 								<!-- <div class="col-lg-3">
 									<div class="mb-3">
 										<label class="form-label">Limitations Invoices</label>
@@ -616,7 +414,7 @@
 									</div>
 								</div> -->
 								<!-- <div class="row"> -->
-									<!-- <div class="col-lg-3 col-sm-6">
+								<!-- <div class="col-lg-3 col-sm-6">
 										<div class="form-check d-flex align-items-center mb-3">
 											<label class="form-check-label mt-0 text-dark fw-medium">
 												<input name="exployees" class="form-check-input" type="checkbox">
@@ -744,7 +542,7 @@
 											</label>
 										</div>
 									</div> -->
-									<!-- <div class="col-md-6">
+								<!-- <div class="col-md-6">
 										<div class="d-flex align-items-center mb-3">
 											<label class="form-check-label mt-0 me-2 text-dark fw-medium">
 												Access Trial
@@ -756,7 +554,7 @@
 									</div> -->
 								<!-- </div> -->
 								<div class="row align-items-center gx-3">
-									
+
 								</div>
 								<!-- <div class="col-md-12">
 									<div class="mb-3">
@@ -786,7 +584,7 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<form action="packages.php">
+					<form id="edit_form" action="packages.php">
 						<div class="modal-body pb-0">
 							<div class="row">
 								<div class="col-md-12">
@@ -802,66 +600,53 @@
 											<div class="profile-uploader d-flex align-items-center">
 												<div class="drag-upload-btn btn btn-sm btn-primary me-2">
 													Upload
-													<input type="file" class="form-control image-sign" multiple="">
+													<input name='edit_profile' type="file" class="form-control image-sign" multiple="">
 												</div>
 												<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 											</div>
-
+											<input name='id' type="hidden">
 										</div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Name<span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option>Advanced</option>
-											<option>Basic</option>
-											<option>Enterprise</option>
+										<select name="edit_plan_name" class="select">
+											<option value="">Select</option>
+											<option value="advanced">Advanced</option>
+											<option value="basic">Basic</option>
+											<option value="enterprise">Enterprise</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Type<span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option>Monthly</option>
-											<option>Yearly</option>
+										<select name="edit_plan_type" class="select">
+											<option value="">Select</option>
+											<option value="monthly">Monthly</option>
+											<option value="yearly">Yearly</option>
 										</select>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="mb-3 ">
-										<label class="form-label">Plan Position<span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-										</select>
-									</div>
-								</div>
+
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Currency<span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option>USD</option>
-											<option>EURO</option>
+										<select name="edit_plan_currency" class="select">
+											<option value="">Select</option>
+											<option value="usd">USD</option>
+											<option value="euro">EURO</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
-										<div class="d-flex justify-content-between">
-											<label class="form-label">Plan Currency<span class="text-danger"> *</span></label>
-											<span class="text-primary"><i class="fa-solid fa-circle-exclamation me-2"></i>Set 0 for free</span>
-										</div>
-										<select class="select">
-											<option>Select</option>
-											<option>Fixed</option>
-											<option>Percentage</option>
+										<label class="form-label">Currency Plan<span class="text-danger"> *</span></label>
+										<select name="edit_currency_plan" class="select">
+											<option value="">Select</option>
+											<option value="fixed">Fixed</option>
+											<option value="percentage">Percentage</option>
 										</select>
 									</div>
 								</div>
@@ -869,10 +654,10 @@
 									<div class="mb-3 ">
 										<label class="form-label">Discount Type<span class="text-danger"> *</span></label>
 										<div class="pass-group">
-											<select class="select">
-												<option>Select</option>
-												<option>Fixed</option>
-												<option>Percentage</option>
+											<select name="edit_discount_type" class="select">
+												<option value="">Select</option>
+												<option value="fixed">Fixed</option>
+												<option value="percentage">Percentage</option>
 											</select>
 										</div>
 									</div>
@@ -881,182 +666,15 @@
 									<div class="mb-3 ">
 										<label class="form-label">Discount<span class="text-danger"> *</span></label>
 										<div class="pass-group">
-											<input type="text" class="form-control">
+											<input name="edit_discount" type="text" class="form-control">
 										</div>
 									</div>
 								</div>
-								<div class="col-lg-3">
-									<div class="mb-3">
-										<label class="form-label">Limitations Invoices</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="mb-3">
-										<label class="form-label">Max Customers</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="mb-3">
-										<label class="form-label">Product</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-lg-3">
-									<div class="mb-3">
-										<label class="form-label">Supplier</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="d-flex align-items-center justify-content-between mb-3">
-										<h6>Plan Modules</h6>
-										<div class="form-check d-flex align-items-center">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Select All
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Employees
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Invoices
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Reports
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Contacts
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Clients
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Estimates
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Goals
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Deals
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Projects
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Payments
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Assets
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Leads
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Tickets
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Taxes
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Activities
-											</label>
-										</div>
-									</div>
-									<div class="col-lg-3 col-sm-6">
-										<div class="form-check d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 text-dark fw-medium">
-												<input class="form-check-input" type="checkbox">
-												Pipelines
-											</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="d-flex align-items-center mb-3">
-											<label class="form-check-label mt-0 me-2 text-dark fw-medium">
-												Access Trial
-											</label>
-											<div class="form-check form-switch me-2">
-												<input class="form-check-input me-2" type="checkbox" role="switch">
-											</div>
+								<div class="col-md-3">
+									<div class="mb-3 ">
+										<label class="form-label">Price<span class="text-danger"> *</span></label>
+										<div class="pass-group">
+											<input name="edit_price" type="text" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -1065,38 +683,24 @@
 										<div class="d-flex align-items-center mb-3">
 											<div class="flex-fill">
 												<label class="form-label">Trial Days</label>
-												<input type="text" class="form-control">
+												<input name="edit_trial_days" type="text" class="form-control">
 											</div>
 
 										</div>
 									</div>
-									<div class="col-md-3">
-										<div class="d-block align-items-center ms-3">
-											<label class="form-check-label mt-0 me-2  text-dark">
-												Is Recommended
-											</label>
-											<div class="form-check form-switch me-2">
-												<input class="form-check-input me-2" type="checkbox" role="switch">
-											</div>
-										</div>
-									</div>
+
 									<div class="col-md-5">
 										<div class="mb-3 ">
 											<label class="form-label">Status<span class="text-danger"> *</span></label>
-											<select class="select">
-												<option>Select</option>
-												<option>Active</option>
-												<option>Inactive</option>
+											<select name="edit_status" class="select">
+												<option value="">Select</option>
+												<option value="active">Active</option>
+												<option value="inactive">Inactive</option>
 											</select>
 										</div>
 									</div>
 								</div>
-								<div class="col-md-12">
-									<div class="mb-3">
-										<label class="form-label">Description</label>
-										<textarea class="form-control"></textarea>
-									</div>
-								</div>
+
 							</div>
 						</div>
 						<div class="modal-footer">
@@ -1117,11 +721,13 @@
 						<span class="avatar avatar-xl bg-transparent-danger text-danger mb-3">
 							<i class="ti ti-trash-x fs-36"></i>
 						</span>
+						<input id="delete_id" type="hidden">
 						<h4 class="mb-1">Confirm Delete</h4>
 						<p class="mb-3">You want to delete all the marked items, this cant be undone once you delete.</p>
 						<div class="d-flex justify-content-center">
 							<a href="javascript:void(0);" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</a>
-							<a href="packages.php" class="btn btn-danger">Yes, Delete</a>
+
+							<a href="" id="delete_package" class="btn btn-danger">Yes, Delete</a>
 						</div>
 					</div>
 				</div>

@@ -3,22 +3,23 @@
 <html lang="en" data-layout="without-header">
 
 <head>
-<title>Smarthr Admin Template</title>
- <?php include 'layouts/title-meta.php'; ?>
- <?php include 'layouts/head-css.php'; ?>
- <!-- Bootstrap Tagsinput CSS -->
- <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+	<title>Smarthr Admin Template</title>
+	<?php include 'layouts/title-meta.php'; ?>
+	<?php include 'layouts/head-css.php'; ?>
+	<!-- Bootstrap Tagsinput CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
 
 </head>
+
 <body>
-<div id="global-loader">
+	<div id="global-loader">
 		<div class="page-loader"></div>
 	</div>
 
-    <div class="main-wrapper">
-    <?php include 'layouts/menu.php'; ?>
-<!-- Page Wrapper -->
-<div class="page-wrapper">
+	<div class="main-wrapper">
+		<?php include 'layouts/menu.php'; ?>
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
 			<div class="content">
 
 				<!-- Breadcrumb -->
@@ -73,7 +74,7 @@
 								<img src="assets/img/profiles/avatar-31.jpg" class="rounded-circle" alt="img">
 							</span>
 							<div class="ms-3">
-								<h3 class="mb-2">Welcome Back, Adrian <a href="javascript:void(0);" class="edit-icon"><i class="ti ti-edit fs-14"></i></a></h3>
+								<h3 class="mb-2">Welcome Back, <?php echo $_SESSION['name']  ?> <a href="javascript:void(0);" class="edit-icon"><i class="ti ti-edit fs-14"></i></a></h3>
 								<p>You have <span class="text-primary text-decoration-underline">21</span> Pending Approvals & <span class="text-primary text-decoration-underline">14</span> Leave Requests</p>
 							</div>
 						</div>
@@ -658,7 +659,7 @@
 						</div>
 					</div>
 					<!-- /Jobs Applicants -->
-					
+
 					<!-- Employees -->
 					<div class="col-xxl-4 col-xl-6 d-flex">
 						<div class="card flex-fill">
@@ -667,7 +668,7 @@
 								<a href="employees.php" class="btn btn-light btn-md mb-2">View All</a>
 							</div>
 							<div class="card-body p-0">
-								<div class="table-responsive">	
+								<div class="table-responsive">
 									<table class="table table-nowrap mb-0">
 										<thead>
 											<tr>
@@ -765,7 +766,7 @@
 						</div>
 					</div>
 					<!-- /Employees -->
-					
+
 					<!-- Todo -->
 					<div class="col-xxl-4 col-xl-6 d-flex">
 						<div class="card flex-fill">
@@ -790,7 +791,7 @@
 											</li>
 										</ul>
 									</div>
-									<a href="#" class="btn btn-primary btn-icon btn-xs rounded-circle d-flex align-items-center justify-content-center p-0 mb-2"  data-bs-toggle="modal" data-bs-target="#add_todo"><i class="ti ti-plus fs-16"></i></a>
+									<a href="#" class="btn btn-primary btn-icon btn-xs rounded-circle d-flex align-items-center justify-content-center p-0 mb-2" data-bs-toggle="modal" data-bs-target="#add_todo"><i class="ti ti-plus fs-16"></i></a>
 								</div>
 							</div>
 							<div class="card-body">
@@ -805,7 +806,7 @@
 									<i class="ti ti-grid-dots me-2"></i>
 									<div class="form-check">
 										<input class="form-check-input" type="checkbox" id="todo2">
-										<label class="form-check-label fw-medium" for="todo2">Add Meeting  to Client</label>
+										<label class="form-check-label fw-medium" for="todo2">Add Meeting to Client</label>
 									</div>
 								</div>
 								<div class="d-flex align-items-center todo-item border p-2 br-5 mb-2">
@@ -844,7 +845,7 @@
 				</div>
 
 				<div class="row">
-					
+
 					<!-- Sales Overview -->
 					<div class="col-xl-7 d-flex">
 						<div class="card flex-fill">
@@ -868,7 +869,7 @@
 												<a href="javascript:void(0);" class="dropdown-item rounded-1">Junior Tester</a>
 											</li>
 										</ul>
-									</div>	
+									</div>
 								</div>
 							</div>
 							<div class="card-body pb-0">
@@ -884,7 +885,7 @@
 						</div>
 					</div>
 					<!-- /Sales Overview -->
-					
+
 					<!-- Invoices -->
 					<div class="col-xl-5 d-flex">
 						<div class="card flex-fill">
@@ -908,7 +909,7 @@
 										</ul>
 									</div>
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -926,7 +927,7 @@
 								</div>
 							</div>
 							<div class="card-body pt-2">
-								<div class="table-responsive pt-1">	
+								<div class="table-responsive pt-1">
 									<table class="table table-nowrap table-borderless mb-0">
 										<tbody>
 											<tr>
@@ -1041,7 +1042,7 @@
 				</div>
 
 				<div class="row">
-					
+
 					<!-- Projects -->
 					<div class="col-xxl-8 col-xl-7 d-flex">
 						<div class="card flex-fill">
@@ -1049,7 +1050,7 @@
 								<h5 class="mb-2">Projects</h5>
 								<div class="d-flex align-items-center">
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -1067,7 +1068,7 @@
 								</div>
 							</div>
 							<div class="card-body p-0">
-								<div class="table-responsive">	
+								<div class="table-responsive">
 									<table class="table table-nowrap mb-0">
 										<thead>
 											<tr>
@@ -1082,7 +1083,9 @@
 										<tbody>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-001</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Office Management App</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Office Management App</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1111,7 +1114,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-002</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Clinic Management </a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Clinic Management </a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1143,7 +1148,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-003</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Educational Platform</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Educational Platform</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1172,7 +1179,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-004</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Chat & Call Mobile App</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Chat & Call Mobile App</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1201,7 +1210,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-005</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1230,7 +1241,9 @@
 											</tr>
 											<tr>
 												<td><a href="project-details.php" class="link-default">PRO-006</a></td>
-												<td><h6 class="fw-medium"><a href="project-details.php">Service Booking Software</a></h6></td>
+												<td>
+													<h6 class="fw-medium"><a href="project-details.php">Service Booking Software</a></h6>
+												</td>
 												<td>
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1259,7 +1272,9 @@
 											</tr>
 											<tr>
 												<td class="border-0"><a href="project-details.php" class="link-default">PRO-008</a></td>
-												<td class="border-0"><h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6></td>
+												<td class="border-0">
+													<h6 class="fw-medium"><a href="project-details.php">Travel Planning Website</a></h6>
+												</td>
 												<td class="border-0">
 													<div class="avatar-list-stacked avatar-group-sm">
 														<span class="avatar avatar-rounded">
@@ -1304,7 +1319,7 @@
 								<h5 class="mb-2">Tasks Statistics</h5>
 								<div class="d-flex align-items-center">
 									<div class="dropdown mb-2">
-										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center"  data-bs-toggle="dropdown">
+										<a href="javascript:void(0);" class="btn btn-white border btn-sm d-inline-flex align-items-center" data-bs-toggle="dropdown">
 											<i class="ti ti-calendar me-1"></i>This Week
 										</a>
 										<ul class="dropdown-menu  dropdown-menu-end p-3">
@@ -1658,7 +1673,7 @@
 											<option>Internal</option>
 											<option>Projects</option>
 											<option>Meetings</option>
-											<option>Reminder</option> 	 
+											<option>Reminder</option>
 										</select>
 									</div>
 								</div>
@@ -1734,7 +1749,7 @@
 								<li class="active p-2 pt-0">
 									<h6 class="fw-medium">Basic Information</h6>
 								</li>
-								<li class="p-2 pt-0">									
+								<li class="p-2 pt-0">
 									<h6 class="fw-medium">Members</h6>
 								</li>
 							</ul>
@@ -1744,10 +1759,10 @@
 								<div class="modal-body">
 									<div class="row">
 										<div class="col-md-12">
-											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
+											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
 												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
 													<i class="ti ti-photo text-gray-2 fs-16"></i>
-												</div>                                              
+												</div>
 												<div class="profile-upload">
 													<div class="mb-2">
 														<h6 class="mb-1">Upload Project Logo</h6>
@@ -1760,7 +1775,7 @@
 														</div>
 														<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 													</div>
-													
+
 												</div>
 											</div>
 										</div>
@@ -1846,7 +1861,7 @@
 												<div class="summernote"></div>
 											</div>
 										</div>
-									</div>								
+									</div>
 								</div>
 								<div class="modal-footer">
 									<div class="d-flex align-items-center justify-content-end">
@@ -1863,19 +1878,19 @@
 										<div class="col-md-12">
 											<div class="mb-3">
 												<label class="form-label me-2">Team Members</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Jerald,Andrew,Philip,Davis">
+												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput" name="Label" value="Jerald,Andrew,Philip,Davis">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="mb-3">
 												<label class="form-label me-2">Team Leader</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Hendry,James">
+												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput" name="Label" value="Hendry,James">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="mb-3">
 												<label class="form-label me-2">Project Manager</label>
-												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput"  name="Label" value="Dwight">
+												<input class="input-tags form-control" placeholder="Add new" type="text" data-role="tagsinput" name="Label" value="Dwight">
 											</div>
 										</div>
 										<div class="col-md-12">
@@ -1899,7 +1914,7 @@
 												</select>
 											</div>
 										</div>
-									</div>								
+									</div>
 								</div>
 								<div class="modal-footer">
 									<div class="d-flex align-items-center justify-content-end">
@@ -1937,7 +1952,7 @@
 											<option>Brian Villalobos</option>
 											<option>Harvey Smith</option>
 										</select>
-									</div>	
+									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="mb-3">
@@ -1948,30 +1963,30 @@
 											<option>Casual Leave</option>
 											<option>Annual Leave</option>
 										</select>
-									</div>	
+									</div>
 								</div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">From </label>
-                                        <div class="input-icon-end position-relative">
-                                            <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
-                                            <span class="input-icon-addon">
-                                                <i class="ti ti-calendar text-gray-7"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">To </label>
-                                        <div class="input-icon-end position-relative">
-                                            <input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
-                                            <span class="input-icon-addon">
-                                                <i class="ti ti-calendar text-gray-7"></i>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>   
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label">From </label>
+										<div class="input-icon-end position-relative">
+											<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+											<span class="input-icon-addon">
+												<i class="ti ti-calendar text-gray-7"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label class="form-label">To </label>
+										<div class="input-icon-end position-relative">
+											<input type="text" class="form-control datetimepicker" placeholder="dd/mm/yyyy">
+											<span class="input-icon-addon">
+												<i class="ti ti-calendar text-gray-7"></i>
+											</span>
+										</div>
+									</div>
+								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">No of Days</label>
@@ -2003,15 +2018,16 @@
 		<!-- /Add Leaves -->
 
 
-    </div>
-<!-- end main wrapper-->
-<!-- JAVASCRIPT -->
-<?php include 'layouts/vendor-scripts.php'; ?>
-<!-- Chart JS -->
-<script src="assets/plugins/chartjs/chart.min.js"></script>
-<script src="assets/plugins/chartjs/chart-data.js"></script>
-<!-- Bootstrap Tagsinput JS -->
-<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-<script src="assets/js/todo.js"></script>
+	</div>
+	<!-- end main wrapper-->
+	<!-- JAVASCRIPT -->
+	<?php include 'layouts/vendor-scripts.php'; ?>
+	<!-- Chart JS -->
+	<script src="assets/plugins/chartjs/chart.min.js"></script>
+	<script src="assets/plugins/chartjs/chart-data.js"></script>
+	<!-- Bootstrap Tagsinput JS -->
+	<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+	<script src="assets/js/todo.js"></script>
 </body>
+
 </html>

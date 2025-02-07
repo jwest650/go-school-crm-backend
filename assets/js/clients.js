@@ -1,38 +1,44 @@
-$('#company_form').on('submit',function(e){
+$('#admin_form').on('submit',function(e){
     e.preventDefault()
 
-    $('#company_form').validate({
+    $('#admin_form').validate({
         rules:{
             name:{
                 required:true,
                 minlength:3
             },
+            email:{
+                required:true,
+               
+            },
             phone_number:{
                 required:true,
                 minlength:10
             },
+            password:{
+                required:true,
+                minlength:5
+            },
+            confirm_password:{
+                required:true,
+                minlength:5,
+                equalTo:$("input[name='password']")
+            },
            
-            plan_name:{
-                required:true,
-               
-            },
-            plan_type:{
-                required:true,
-               
-            },
-            language:{
-                required:true,
-               
-            },
-            currency:{
-                required:true,
-               
-            },
         },
-        
+        messages:{
+            password:{
+                minlength:'password should be more than 5 characters'
+            },
+            confirm_password:{
+                equalTo:'password must must match',
+                 minlength:'password should be more than 5 characters'
+            }
+            
+        }
     })
 
-    if(!$('#company_form').valid()){
+    if(!$('#admin_form').valid()){
 return
     }
 
@@ -40,13 +46,13 @@ const formData = new FormData(this);
 console.log(formData)
 
 
-axios.post(`api/companies.php`,formData).then(res=>{
+axios.post(`api/add_admin.php`,formData).then(res=>{
     let result=res.data
     console.log(result)
    if(result.status == 'success'){
     new Notify({
         title: 'Added',
-        text: 'companies added',
+        text: 'Admin added',
         status: 'success', // can be 'success', 'error', etc.
         effect: 'fade',
         speed: 300,
@@ -82,12 +88,4 @@ axios.post(`api/companies.php`,formData).then(res=>{
     });
     console.log('error',error)
 })
-
-})
-
-$('[name="profile"]').on('change',function(e){
-    e.preventDefault()
-    $('#img').attr('src',URL.createObjectURL(e.target.files[0]))
-    console.log('yh')
-
 })

@@ -28280,6 +28280,18 @@ span.flatpickr-weekday {
   border-radius: 5px;
 }
 
+
+/* HTML: <div class="loader"></div> */
+.loader-spinner {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #ffff #0000;
+  animation: l1 1s infinite;
+  margin-left: 15px;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
 /* End:: swiper js */
 
 /*# sourceMappingURL=style.css.map */

@@ -46,14 +46,14 @@
 						<div class="border-bottom mb-3 pb-3">
 							<h4>Profile </h4>
 						</div>
-						<form action="profile.php">
+						<form id="profile_form"  enctype="multipart/form-data">
 							<div class="border-bottom mb-3">
 								<div class="row">
 									<div class="col-md-12">
 										<div>					
 											<h6 class="mb-3">Basic Information</h6>
 											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
-												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
+												<div id="profile-img" class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
 													<i class="ti ti-photo text-gray-3 fs-16"></i>
 												</div>                                              
 												<div class="profile-upload">
@@ -64,11 +64,10 @@
 													<div class="profile-uploader d-flex align-items-center">
 														<div class="drag-upload-btn btn btn-sm btn-primary me-2">
 															Upload
-															<input type="file" class="form-control image-sign" multiple="">
+															<input name="profile" type="file" accept="image/*" class="form-control image-sign" />
 														</div>
 														<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 													</div>
-													
 												</div>
 											</div>
 										</div>
@@ -81,7 +80,7 @@
 												<label class="form-label mb-md-0">First Name</label>
 											</div>
 											<div class="col-md-8">
-												<input type="text" class="form-control">
+												<input name='name' type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -91,7 +90,7 @@
 												<label class="form-label mb-md-0">Last Name</label>
 											</div>
 											<div class="col-md-8">
-												<input type="text" class="form-control">
+												<input name='last_name' type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -101,7 +100,7 @@
 												<label class="form-label mb-md-0">Email</label>
 											</div>
 											<div class="col-md-8">
-												<input type="text" class="form-control">
+												<input name="email" type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -111,7 +110,7 @@
 												<label class="form-label mb-md-0">Phone</label>
 											</div>
 											<div class="col-md-8">
-												<input type="text" class="form-control">
+												<input name="phone" type="text" class="form-control">
 											</div>
 										</div>
 									</div>
@@ -126,7 +125,7 @@
 												<label class="form-label mb-md-0">Address</label>
 											</div>
 											<div class="col-md-10">
-												<input type="text" class="form-control">
+												<input name="address" type="text" class="form-control">
 											</div>	
 										</div>
 									</div>
@@ -136,8 +135,9 @@
 												<label class="form-label mb-md-0">Country</label>
 											</div>
 											<div class="col-md-8">
-												<select class="select">
-													<option>Select</option>
+												<select name="country" class="select">
+													<option value="">Select</option>
+													<option>Ghana</option>
 													<option>USA</option>
 													<option>Canada</option>
 													<option>Germany</option>
@@ -146,25 +146,7 @@
 											</div>	
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="row align-items-center mb-3">
-											<div class="col-md-4">
-												<label class="form-label mb-md-0">State</label>
-											</div>
-											<div class="col-md-8">
-												<div>
-													<select class="select">
-														<option>Select</option>
-<option >California</option>
-<option>New York</option>
-<option>Texas</option>
-<option>Florida</option>
-
-													</select>
-												</div>
-											</div>	
-										</div>
-									</div>
+									
 									<div class="col-md-6">
 										<div class="row align-items-center mb-3">
 											<div class="col-md-4">
@@ -172,14 +154,14 @@
 											</div>
 											<div class="col-md-8">
 												<div>
-													<select class="select">
-														<select class="select">
-															<option>Select</option>
-															<option >Los Angeles</option>
-															<option>San Diego</option>
-															<option>Fresno</option>
-															<option>San Francisco</option>
-															
+													<select name="city" class="select">
+														<option value="">Select</option>
+													<?php 
+    $cities = ["Accra", "Volta", "Kumasi"];
+    foreach ($cities as $city) {
+        echo '<option value="' . htmlspecialchars($city) . '">' . htmlspecialchars($city) . '</option>';
+    }
+    ?>
 													</select>
 												</div>
 											</div>	
@@ -191,7 +173,7 @@
 												<label class="form-label mb-md-0">Postal Code</label>
 											</div>
 											<div class="col-md-8">
-												<input type="text" class="form-control">
+												<input name="postal_code" type="text" class="form-control">
 											</div>	
 										</div>
 									</div>
@@ -207,7 +189,7 @@
 											</div>
 											<div class="col-md-7">
 												<div class="pass-group">
-													<input type="password" class="pass-input form-control">
+													<input name="password" type="password" class="pass-input form-control">
 													<span class="ti toggle-password ti-eye-off"></span>
 												</div>
 											</div>	
@@ -220,7 +202,7 @@
 											</div>
 											<div class="col-md-7">
 												<div class="pass-group">
-													<input type="password" class="pass-inputs form-control">
+													<input name="new_password" type="password" class="pass-inputs form-control">
 													<span class="ti toggle-passwords ti-eye-off"></span>
 												</div>
 											</div>	
@@ -233,7 +215,7 @@
 											</div>
 											<div class="col-md-7">
 												<div class="pass-group">
-													<input type="password" class="pass-inputa form-control">
+													<input name="confirm_password" type="password" class="pass-inputa form-control">
 													<span class="ti toggle-passworda ti-eye-off"></span>
 												</div>
 											</div>	
@@ -242,6 +224,8 @@
 								</div>
 							</div>
 							<div class="d-flex align-items-center justify-content-end">
+							<input type="hidden" name="id" />
+
 								<button type="button" class="btn btn-outline-light border me-3">Cancel</button>
 								<button type="submit" class="btn btn-primary">Save</button>
 							</div>
@@ -250,8 +234,8 @@
 				</div>
 			</div>
 			<div class="footer d-sm-flex align-items-center justify-content-between border-top bg-white p-3">
-				<p class="mb-0">2014 - 2025 &copy; SmartHR.</p>
-				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Dreams</a></p>
+				<p class="mb-0">2014 - 2025 &copy; Go School.</p>
+				<p>Designed &amp; Developed By <a href="javascript:void(0);" class="text-primary">Go Inc</a></p>
 			</div>
 		</div>
 		<!-- /Page Wrapper -->
@@ -263,6 +247,6 @@
 <?php include 'layouts/vendor-scripts.php'; ?>
 <!-- Bootstrap Tagsinput JS -->
 <script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-
+<script src="assets/js/profile.js"></script>
 </body>
 </html>
