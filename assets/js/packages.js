@@ -78,7 +78,6 @@ axios.post(`api/packages.php`,formData).then(res=>{
     });
    }
        
-   console.log(result)
      
         
    
@@ -175,7 +174,6 @@ axios.post(`api/packages.php`,formData).then(res=>{
     });
    }
        
-   console.log(result)
      
         
    
@@ -198,7 +196,11 @@ axios.post(`api/packages.php`,formData).then(res=>{
 $('[name="profile"]').on('change',function(e){
     e.preventDefault()
     $('#img').attr('src',URL.createObjectURL(e.target.files[0]))
-    console.log('yh')
+
+})
+$('[name="edit_profile"]').on('change',function(e){
+    e.preventDefault()
+    $('#edit_img').attr('src',URL.createObjectURL(e.target.files[0]))
 
 })
 
@@ -226,7 +228,7 @@ $(document).ready(async function (){
 										<td>${value.price}</td>
                                         <td>${value.created_at}</td>
 										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-sm">
+											<span class="badge ${value.status == "active" ? "badge-success" : "badge-danger"} d-inline-flex align-items-center badge-sm">
 												<i class="ti ti-point-filled me-1"></i>${value.status}
 											</span>
 										</td>
@@ -283,7 +285,6 @@ function insert_total(data){
 $('#edit_plans').on('show.bs.modal', function (e) {
     var triggerElement = $(e.relatedTarget); // Button that triggered the modal
     var dataId = triggerElement.data('id'); // Extract info from data-* attributes
-    console.log(dataId)
 
 
     axios.post(`api/packages.php`,{
@@ -316,7 +317,6 @@ $('#edit_plans').on('show.bs.modal', function (e) {
 $('#delete_modal').on('show.bs.modal', function (e) {
     var triggerElement = $(e.relatedTarget); // Button that triggered the modal
     var dataId = triggerElement.data('id'); // Extract info from data-* attributes
-    console.log(dataId)
     $('#delete_id').val(dataId).change();
 });
 
@@ -393,5 +393,8 @@ function insert_edit_data(data){
     $('[name="edit_status"]').val(data.status).change();
     $('[name="edit_price"]').val(data.price).change();
     $('[name="id"]').val(data.id).change();
+    if(data.profile){
+        $('[name="edit_img"]').attr('src',`api/${data.profile}`).change()
+    }
 
 }

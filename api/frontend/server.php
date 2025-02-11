@@ -21,21 +21,23 @@ $db = $database->connect();
 
 if (isset($_POST['sign_up'])) {
     $email = htmlspecialchars($_POST['email']);
-    $name = htmlspecialchars($_POST['name']);
+    $first_name = htmlspecialchars($_POST['first_name']);
+    $last_name = htmlspecialchars($_POST['last_name']);
     $password = htmlspecialchars($_POST['password']);
     $role = htmlspecialchars($_POST['role']);
-    $school_name = htmlspecialchars($_POST['schoolName']);
+    $school_name = htmlspecialchars($_POST['school_id']);
     $phone_number = htmlspecialchars($_POST['mobileNumber']);
     $profile = isset($_POST['profile']) ? htmlspecialchars($_POST['profile']) : "";
 
 
-    $sql = 'INSERT INTO users (name,email,password,role,school_name,phone_number,profile) VALUES(:name,:email,:password,:role,:school_name,:phone_number,:profile)';
+    $sql = 'INSERT INTO users (first_name,last_name,email,password,role,school_id,phone_number,profile) VALUES(:first_name,:last_name,:email,:password,:role,:school_id,:phone_number,:profile)';
     $smt = $db->prepare($sql);
-    $smt->bindParam(':name', $name);
+    $smt->bindParam(':first_name', $first_name);
+    $smt->bindParam(':last_name', $last_name);
     $smt->bindParam(':email', $email);
     $smt->bindParam(':password', $password);
     $smt->bindParam(':role', $role);
-    $smt->bindParam(':school_name', $school_name);
+    $smt->bindParam(':school_id', $school_name);
     $smt->bindParam(':phone_number', $phone_number);
     $smt->bindParam(':profile', $profile);
 
@@ -43,7 +45,7 @@ if (isset($_POST['sign_up'])) {
         $response = [];
         if ($smt->execute()) {
             $response['status'] = 'success';
-            $sql = 'SELECT id, name,email,role,school_name,profile FROM users WHERE email =:email AND password =:password';
+            $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
             $smt = $db->prepare($sql);
 
             $smt->bindParam(':email', $email);
@@ -76,7 +78,7 @@ if (isset($_POST['sign_in'])) {
 
 
 
-    $sql = 'SELECT id, name,email,role,school_name,profile FROM users WHERE email =:email AND password =:password';
+    $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
     $smt = $db->prepare($sql);
 
     $smt->bindParam(':email', $email);
@@ -86,6 +88,36 @@ if (isset($_POST['sign_in'])) {
     try {
         $smt->execute();
         $user = $smt->fetch();
+        $response = [];
+        if (!empty($user)) {
+            $response['status'] = 'success';
+            $response['data'] = $user;
+        } else {
+            $response['status'] = 'failed';
+            $response['message'] = 'fetch failed';
+        }
+    } catch (exception $e) {
+        $response['status'] = 'failed';
+        $response['message'] = $e->getMessage();
+    }
+
+    echo json_encode($response);
+}
+
+
+if (isset($_POST['get_schools'])) {
+
+
+
+    $sql = "SELECT * FROM schools";
+    $smt = $db->prepare($sql);
+
+
+
+
+    try {
+        $smt->execute();
+        $user = $smt->fetchAll();
         $response = [];
         if (!empty($user)) {
             $response['status'] = 'success';

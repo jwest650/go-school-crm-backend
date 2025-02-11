@@ -75,7 +75,7 @@
 									</span>
 									<div class="ms-2 overflow-hidden">
 										<p class="fs-12 fw-medium mb-1 text-truncate">Total School</p>
-										<h4>950</h4>
+										<h4 id="total_schools">0</h4>
 									</div>
 								</div>
 								<div id="total-chart"></div>
@@ -94,7 +94,7 @@
 									</span>
 									<div class="ms-2 overflow-hidden">
 										<p class="fs-12 fw-medium mb-1 text-truncate">Active School</p>
-										<h4>920</h4>
+										<h4 id="total_active_school">0</h4>
 									</div>
 								</div>
 								<div id="active-chart"></div>
@@ -113,7 +113,7 @@
 									</span>
 									<div class="ms-2 overflow-hidden">
 										<p class="fs-12 fw-medium mb-1 text-truncate">Inactive School</p>
-										<h4>30</h4>
+										<h4 id="total_inactive_school">0</h4>
 									</div>
 								</div>
 								<div id="inactive-chart"></div>
@@ -132,7 +132,7 @@
 									</span>
 									<div class="ms-2 overflow-hidden">
 										<p class="fs-12 fw-medium mb-1 text-truncate">School Location</p>
-										<h4>180</h4>
+										<h4 id="total_location">0</h4>
 									</div>
 								</div>
 								<div id="location-chart"></div>
@@ -227,387 +227,8 @@
 										<th></th>
 									</tr>
 								</thead>
-								<tbody>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-01.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">BrightWave Innovations</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>michael@example.com</td>
-										<td>bwi.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Advanced (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>12 Sep 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-02.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">Stellar Dynamics</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>sophie@example.com</td>
-										<td>sd.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Basic (Yearly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>24 Oct 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-03.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">Quantum Nexus</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>cameron@example.com</td>
-										<td>qn.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Advanced (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>18 Feb 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-04.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">EcoVision Enterprises</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>doris@example.com</td>
-										<td>eve.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Advanced (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>17 Oct 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-05.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">Aurora Technologies</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>thomas@example.com</td>
-										<td>at.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Enterprise (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>20 Jul 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-06.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">BlueSky Ventures</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>kathleen@example.com</td>
-										<td>bsv.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Advanced (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>10 Apr 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-07.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">TerraFusion Energy</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>bruce@example.com</td>
-										<td>tfe.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Enterprise (Yearly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>29 Aug 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-08.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">UrbanPulse Design</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>estelle@example.com</td>
-										<td>upd.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Basic (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>22 Feb 2024</td>
-										<td>
-											<span class="badge badge-danger d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Inactive
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-09.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">Nimbus Networks</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>stephen@example.com</td>
-										<td>nn.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												<p class="mb-0 me-2">Basic (Yearly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>03 Nov 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="form-check form-check-md">
-												<input class="form-check-input" type="checkbox">
-											</div>
-										</td>
-										<td>
-											<div class="d-flex align-items-center file-name-icon">
-												<a href="#" class="avatar avatar-md border rounded-circle">
-													<img src="assets/img/company/company-10.svg" class="img-fluid" alt="img">
-												</a>
-												<div class="ms-2">
-													<h6 class="fw-medium"><a href="#">Epicurean Delights</a></h6>
-												</div>
-											</div>
-										</td>
-										<td>angela@example.com</td>
-										<td>ed.example.com</td>
-										<td>
-											<div class="d-flex align-items-center justify-content-between">
-												`<p class="mb-0 me-2">Advanced (Monthly)</p>
-												<a href="#" data-bs-toggle="modal" class="badge badge-purple badge-xs" data-bs-target="#upgrade_info">Upgrade</a>
-											</div>
-										</td>
-										<td>17 Dec 2024</td>
-										<td>
-											<span class="badge badge-success d-inline-flex align-items-center badge-xs">
-												<i class="ti ti-point-filled me-1"></i>Active
-											</span>
-										</td>
-										<td>
-											<div class="action-icon d-inline-flex">
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#company_detail"><i class="ti ti-eye"></i></a>
-												<a href="#" class="me-2" data-bs-toggle="modal" data-bs-target="#edit_company"><i class="ti ti-edit"></i></a>
-												<a href="javascript:void(0);" data-bs-target="#delete_modal" data-bs-toggle="modal"><i class="ti ti-trash"></i></a>
-											</div>
-										</td>
-									</tr>
+								<tbody id="companies_table">
+
 								</tbody>
 							</table>
 						</div>
@@ -746,6 +367,19 @@
 										</select>
 									</div>
 								</div>
+								<div class="col-md-4">
+									<div class="mb-3 ">
+										<label class="form-label">Location</label>
+										<select name="location" class="select">
+											<option value="">Select</option>
+											<option value="accra">Accra</option>
+											<option value="volta">Volta</option>
+											<option value="ashanti">Ashanti</option>
+
+
+										</select>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="modal-footer">
@@ -768,13 +402,13 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<form action="companies.php">
+					<form id="edit_company_form">
 						<div class="modal-body pb-0">
 							<div class="row">
 								<div class="col-md-12">
 									<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
 										<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-											<img src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
+											<img name='edit_img' src="assets/img/profiles/avatar-30.jpg" alt="img" class="rounded-circle">
 										</div>
 										<div class="profile-upload">
 											<div class="mb-2">
@@ -784,99 +418,112 @@
 											<div class="profile-uploader d-flex align-items-center">
 												<div class="drag-upload-btn btn btn-sm btn-primary me-2">
 													Upload
-													<input type="file" class="form-control image-sign" multiple="">
+													<input name="edit_profile" type="file" class="form-control image-sign" multiple="">
 												</div>
 												<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 											</div>
-
+											<input name="edit_id" type="hidden">
 										</div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">Name <span class="text-danger"> *</span></label>
-										<input type="text" class="form-control" value="Stellar Dynamics">
+										<input name="edit_name" type="text" class="form-control" value="Stellar Dynamics">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">Email Address</label>
-										<input type="email" class="form-control" value="sophie@example.com">
+										<input name="edit_email" type="email" class="form-control" value="sophie@example.com">
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="mb-3">
 										<label class="form-label">Account URL</label>
-										<input type="text" class="form-control" value="sd.example.com">
+										<input name="edit_account_url" type="text" class="form-control" value="sd.example.com">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">Phone Number <span class="text-danger"> *</span></label>
-										<input type="text" class="form-control" value="+1 895455450">
+										<input name="edit_phone_number" type="text" class="form-control" value="+1 895455450">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label class="form-label">Website</label>
-										<input type="text" class="form-control" value="Admin Website">
+										<input name="edit_website" type="text" class="form-control" value="Admin Website">
 									</div>
 								</div>
 
 								<div class="col-md-12">
 									<div class="mb-3">
 										<label class="form-label">Address</label>
-										<input type="text" class="form-control">
+										<input name="edit_address" type="text" class="form-control">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Name <span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option selected>Advanced</option>
-											<option>Basic</option>
-											<option>Enterprise</option>
+										<select name="edit_plan_name" class="select">
+											<option value="">Select</option>
+											<option value="advanced">Advanced</option>
+											<option value="basic">Basic</option>
+											<option value="enterprise">Enterprise</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3 ">
 										<label class="form-label">Plan Type <span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option selected>Monthly</option>
-											<option>Yearly</option>
+										<select name="edit_plan_type" class="select">
+											<option value="">Select</option>
+											<option value="monthly">Monthly</option>
+											<option value="yearly">Yearly</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="mb-3 ">
 										<label class="form-label">Currency <span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option selected>USD</option>
-											<option>Euro</option>
+										<select name="edit_currency" class="select">
+											<option value="">Select</option>
+											<option value="usd">USD</option>
+											<option value="euro">Euro</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="mb-3 ">
 										<label class="form-label">Language <span class="text-danger"> *</span></label>
-										<select class="select">
-											<option>Select</option>
-											<option selected>English</option>
-											<option>Arabic</option>
+										<select name="edit_language" class="select">
+											<option value="">Select</option>
+											<option value="english">English</option>
+											<option value="arabic">Arabic</option>
 										</select>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="mb-3 ">
 										<label class="form-label">Status</label>
-										<select class="select">
-											<option>Select</option>
-											<option selected>Active</option>
-											<option>Inactive</option>
+										<select name="edit_status" class="select">
+											<option value="">Select</option>
+											<option value="active">Active</option>
+											<option value="inactive">Inactive</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="mb-3 ">
+										<label class="form-label">Location</label>
+										<select name="edit_location" class="select">
+											<option value="">Select</option>
+											<option value="accra">Accra</option>
+											<option value="volta">Volta</option>
+											<option value="ashanti">Ashanti</option>
+
+
 										</select>
 									</div>
 								</div>
@@ -1034,7 +681,7 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<div class="moday-body">
+					<div class="moday-body ">
 						<div class="p-3">
 							<div class="d-flex justify-content-between align-items-center rounded bg-light p-3">
 								<div class="file-name-icon d-flex align-items-center">
@@ -1042,11 +689,11 @@
 										<img src="assets/img/company/company-01.svg" class="img-fluid" alt="img">
 									</a>
 									<div>
-										<p class="text-gray-9 fw-medium mb-0">BrightWave Innovations</p>
-										<p>michael@example.com</p>
+										<p id="name" class="text-gray-9 fw-medium mb-0 text-capitalize"></p>
+										<p id='email' class='text-capitalize'></p>
 									</div>
 								</div>
-								<span class="badge badge-success"><i class="ti ti-point-filled"></i>Active</span>
+								<span id="status" class="badge text-capitalize"></span>
 							</div>
 						</div>
 						<div class="p-3">
@@ -1056,19 +703,19 @@
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Account URL</p>
-											<p class="text-gray-9">bwi.example.com</p>
+											<p id="account_url" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
-											<p class="fs-12 mb-0">Phone Number</p>
-											<p class="text-gray-9">(163) 2459 315</p>
+											<p class="fs-12 mb-0 text-capitalize">Phone Number</p>
+											<p id="phone_number" class="text-gray-9  text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Website</p>
-											<p class="text-gray-9">www.exmple.com</p>
+											<p id="website" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 								</div>
@@ -1076,19 +723,19 @@
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Currency</p>
-											<p class="text-gray-9">United Stated Dollar (USD)</p>
+											<p id="currency" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Language</p>
-											<p class="text-gray-9">English</p>
+											<p id="language" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Addresss</p>
-											<p class="text-gray-9">3705 Lynn Avenue, Phelps, WI 54554</p>
+											<p id="address" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 								</div>
@@ -1099,19 +746,19 @@
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Plan Name</p>
-											<p class="text-gray-9">Advanced</p>
+											<p id="plan_name" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Plan Type</p>
-											<p class="text-gray-9">Monthly</p>
+											<p id="plan_type" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Price</p>
-											<p class="text-gray-9">$200</p>
+											<p id="price" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 								</div>
@@ -1119,13 +766,13 @@
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Register Date</p>
-											<p class="text-gray-9">12 Sep 2024</p>
+											<p id="created_at" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="mb-3">
 											<p class="fs-12 mb-0">Expiring On</p>
-											<p class="text-gray-9">11 Oct 2024</p>
+											<p id="expiring_on" class="text-gray-9 text-capitalize"></p>
 										</div>
 									</div>
 								</div>
@@ -1150,9 +797,10 @@
 						</span>
 						<h4 class="mb-1">Confirm Delete</h4>
 						<p class="mb-3">You want to delete all the marked items, this cant be undone once you delete.</p>
+						<input type="hidden" name="delete_id" id="delete_id">
 						<div class="d-flex justify-content-center">
 							<a href="javascript:void(0);" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</a>
-							<a href="companies.php" class="btn btn-danger">Yes, Delete</a>
+							<a id="delete_company" href="javascript:void(0);" class="btn btn-danger">Yes, Delete</a>
 						</div>
 					</div>
 				</div>
