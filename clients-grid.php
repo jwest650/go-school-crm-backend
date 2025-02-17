@@ -1060,7 +1060,7 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<form id="admin_form" action="clients.php">
+					<form id="admin_form">
 						<div class="contact-grids-tab">
 							<ul class="nav nav-underline" id="myTab" role="tablist">
 								<li class="nav-item" role="presentation">
@@ -1817,7 +1817,7 @@
 	<?php include 'layouts/vendor-scripts.php'; ?>
 	<!-- Bootstrap Tagsinput JS -->
 	<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-	<script src="assts/js/clients.js"></script>
+	<script src="assets/js/clients.js"></script>
 </body>
 
 </html>

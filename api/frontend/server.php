@@ -24,13 +24,17 @@ if (isset($_POST['sign_up'])) {
     $first_name = htmlspecialchars($_POST['first_name']);
     $last_name = htmlspecialchars($_POST['last_name']);
     $password = htmlspecialchars($_POST['password']);
-    $role = htmlspecialchars($_POST['role']);
+    $role = strtolower(htmlspecialchars($_POST['role']));
     $school_name = htmlspecialchars($_POST['school_id']);
     $phone_number = htmlspecialchars($_POST['mobileNumber']);
     $profile = isset($_POST['profile']) ? htmlspecialchars($_POST['profile']) : "";
+    $sql = '';
+    if ($role == 'teacher') {
+        $sql = 'INSERT INTO teachers (first_name,last_name,email,password,role,school_id,phone_number,profile) VALUES(:first_name,:last_name,:email,:password,:role,:school_id,:phone_number,:profile)';
+    } else if ($role == 'parent') {
+        $sql = 'INSERT INTO users (first_name,last_name,email,password,role,school_id,phone_number,profile) VALUES(:first_name,:last_name,:email,:password,:role,:school_id,:phone_number,:profile)';
+    }
 
-
-    $sql = 'INSERT INTO users (first_name,last_name,email,password,role,school_id,phone_number,profile) VALUES(:first_name,:last_name,:email,:password,:role,:school_id,:phone_number,:profile)';
     $smt = $db->prepare($sql);
     $smt->bindParam(':first_name', $first_name);
     $smt->bindParam(':last_name', $last_name);
@@ -45,7 +49,13 @@ if (isset($_POST['sign_up'])) {
         $response = [];
         if ($smt->execute()) {
             $response['status'] = 'success';
-            $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
+            $sql = '';
+            if ($role == 'teacher') {
+                $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM teachers WHERE email =:email AND password =:password';
+            } else if ($role == 'parent') {
+                $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
+            }
+
             $smt = $db->prepare($sql);
 
             $smt->bindParam(':email', $email);
@@ -75,10 +85,19 @@ if (isset($_POST['sign_up'])) {
 if (isset($_POST['sign_in'])) {
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
+    $role = htmlspecialchars($_POST['role']);
 
 
 
-    $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
+    $sql = '';
+
+    if ($role == 'teacher') {
+        $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM teachers WHERE email =:email AND password =:password';
+    } else if ($role == 'parent') {
+        $sql = 'SELECT id, first_name,last_name,email,role,school_id,profile FROM users WHERE email =:email AND password =:password';
+    } else {
+        $sql = 'SELECT id, name as first_name,last_name,email,role,profile,school_id FROM admins WHERE email =:email AND password =:password';
+    }
     $smt = $db->prepare($sql);
 
     $smt->bindParam(':email', $email);

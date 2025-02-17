@@ -1,23 +1,25 @@
 <?php include 'layouts/session.php'; ?>
 <?php include 'layouts/head-main.php'; ?>
+
 <head>
-<title>Smarthr Admin Template</title>
- <?php include 'layouts/title-meta.php'; ?>
- <?php include 'layouts/head-css.php'; ?>
-<!-- Bootstrap Tagsinput CSS -->
-<link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
+	<title>Smarthr Admin Template</title>
+	<?php include 'layouts/title-meta.php'; ?>
+	<?php include 'layouts/head-css.php'; ?>
+	<!-- Bootstrap Tagsinput CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
 
 </head>
+
 <body>
-<div id="global-loader" style="display: none;">
+	<div id="global-loader" style="display: none;">
 		<div class="page-loader"></div>
 	</div>
-    <div class="main-wrapper">
-    <?php include 'layouts/menu.php'; ?>
+	<div class="main-wrapper">
+		<?php include 'layouts/menu.php'; ?>
 
 
-	<!-- Page Wrapper -->
-	<div class="page-wrapper">
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
 			<div class="content">
 
 				<!-- Breadcrumb -->
@@ -71,7 +73,7 @@
 				<!-- /Breadcrumb -->
 
 				<!-- Clients Info -->
-				 <div class="row">
+				<div class="row">
 					<div class="col-xl-3 col-md-6 d-flex">
 						<div class="card flex-fill">
 							<div class="card-body">
@@ -164,8 +166,8 @@
 							</div>
 						</div>
 					</div>
-				 </div>
-				 <!-- /Clients Info -->
+				</div>
+				<!-- /Clients Info -->
 
 				<!-- Clients list -->
 				<div class="card">
@@ -545,7 +547,7 @@
 										</td>
 										<td>Nimbus Networks</td>
 										<td>
-											stephen@example.com	
+											stephen@example.com
 										</td>
 										<td>
 											(175) 2496 125
@@ -624,601 +626,99 @@
 							<i class="ti ti-x"></i>
 						</button>
 					</div>
-					<form action="clients.php">
+					<form id="admin_form">
 						<div class="contact-grids-tab">
 							<ul class="nav nav-underline" id="myTab" role="tablist">
 								<li class="nav-item" role="presentation">
-								  <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#basic-info" type="button" role="tab" aria-selected="true">Basic Information</button>
+									<button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#basic-info" type="button" role="tab" aria-selected="true">Basic Information</button>
 								</li>
-								<li class="nav-item" role="presentation">
-								  <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address" type="button" role="tab" aria-selected="false">Permissions</button>
-								</li>
+
 							</ul>
 						</div>
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="basic-info" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
-									<div class="modal-body pb-0 ">	
-										<div class="row">
-											<div class="col-md-12">
-												<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
-													<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-														<i class="ti ti-photo"></i>
-													</div>                                              
-													<div class="profile-upload">
-														<div class="mb-2">
-															<h6 class="mb-1">Upload Profile Image</h6>
-															<p class="fs-12">Image should be below 4 mb</p>
+								<div class="modal-body pb-0 ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
+												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
+													<i class="ti ti-photo"></i>
+												</div>
+												<div class="profile-upload">
+													<div class="mb-2">
+														<h6 class="mb-1">Upload Profile Image</h6>
+														<p class="fs-12">Image should be below 4 mb</p>
+													</div>
+													<div class="profile-uploader d-flex align-items-center">
+														<div class="drag-upload-btn btn btn-sm btn-primary me-2">
+															Upload
+															<input name="profile" type="file" class="form-control image-sign" multiple="">
 														</div>
-														<div class="profile-uploader d-flex align-items-center">
-															<div class="drag-upload-btn btn btn-sm btn-primary me-2">
-																Upload
-																<input type="file" class="form-control image-sign" multiple="">
-															</div>
-															<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
-														</div>
+														<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 													</div>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">First Name <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control">
-												</div>									
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Last Name</label>
-													<input type="email" class="form-control">
-												</div>									
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Username <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control">
-												</div>									
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Email<span class="text-danger"> *</span></label>
-													<input type="text" class="form-control">
-												</div>									
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3 ">
-													<label class="form-label">Password <span class="text-danger"> *</span></label>
-													<div class="pass-group">
-														<input type="password" class="pass-input form-control">
-														<span class="ti toggle-password ti-eye-off"></span>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3 ">
-													<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
-													<div class="pass-group">
-														<input type="password" class="pass-inputs form-control">
-														<span class="ti toggle-passwords ti-eye-off"></span>
-													</div>
-												</div>
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Phone Number <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control">
-												</div>									
-											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Company</label>
-													<input type="text" class="form-control">
-												</div>		
-											</div>
-										</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
-										<button type="submit" class="btn btn-primary">Save </button>
-									</div>
-							</div>
-							<div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab" tabindex="0">
-								<div class="modal-body pb-0 ">	
-									<div class="card bg-light-500 shadow-none">
-										<div class="card-body d-flex align-items-center justify-content-between flex-wrap row-gap-3">
-											<h6>Enable Options</h6>
-											<div class="d-flex align-items-center justify-content-end">
-												<div class="form-check form-check-md form-switch me-2">
-													<label class="form-check-label mt-0">
-													<input class="form-check-input me-2" type="checkbox" role="switch">
-														Enable all Module
-													</label>
-												</div>
-												<div class="form-check form-check-md d-flex align-items-center">
-													<label class="form-check-label mt-0">
-														<input class="form-check-input" type="checkbox" checked="">
-														Select All
-													</label>
 												</div>
 											</div>
 										</div>
-									</div>
-									<div class="table-responsive permission-table border rounded">
-										<table class="table">
-											<tbody>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch" checked>
-																Holidays
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox" checked="">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Leaves
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Clients
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Projects
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Tasks
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Chats
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Assets
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Timing Sheets
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">First Name <span class="text-danger"> *</span></label>
+												<input name="name" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Last Name</label>
+												<input name='last_name' type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Email<span class="text-danger"> *</span></label>
+												<input name="email" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3 ">
+												<label class="form-label">Password <span class="text-danger"> *</span></label>
+												<div class="pass-group">
+													<input name="password" type="password" class="pass-input form-control">
+													<span class="ti toggle-password ti-eye-off"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3 ">
+												<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
+												<div class="pass-group">
+													<input name="confirm_password" type="password" class="pass-inputs form-control">
+													<span class="ti toggle-passwords ti-eye-off"></span>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Phone Number <span class="text-danger"> *</span></label>
+												<input name="phone" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">School ID</label>
+												<input name="school_id" type="text" class="form-control">
+											</div>
+										</div>
 									</div>
 								</div>
+								<input type="hidden" name=role value="admin">
 								<div class="modal-footer">
 									<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
-									<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#success_modal">Save </button>
+									<button type="submit" class="btn btn-primary">Save </button>
 								</div>
 							</div>
 						</div>
 					</form>
+
 				</div>
 			</div>
 		</div>
@@ -1238,107 +738,107 @@
 						<div class="contact-grids-tab">
 							<ul class="nav nav-underline" id="myTab2" role="tablist">
 								<li class="nav-item" role="presentation">
-								  <button class="nav-link active" id="info-tab2" data-bs-toggle="tab" data-bs-target="#basic-info2" type="button" role="tab" aria-selected="true">Basic Information</button>
+									<button class="nav-link active" id="info-tab2" data-bs-toggle="tab" data-bs-target="#basic-info2" type="button" role="tab" aria-selected="true">Basic Information</button>
 								</li>
 								<li class="nav-item" role="presentation">
-								  <button class="nav-link" id="address-tab2" data-bs-toggle="tab" data-bs-target="#address2" type="button" role="tab" aria-selected="false">Permissions</button>
+									<button class="nav-link" id="address-tab2" data-bs-toggle="tab" data-bs-target="#address2" type="button" role="tab" aria-selected="false">Permissions</button>
 								</li>
 							</ul>
 						</div>
 						<div class="tab-content" id="myTabContent2">
 							<div class="tab-pane fade show active" id="basic-info2" role="tabpanel" aria-labelledby="info-tab2" tabindex="0">
-									<div class="modal-body pb-0 ">	
-										<div class="row">
-											<div class="col-md-12">
-												<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">                                                
-													<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
-														<i class="ti ti-photo"></i>
-													</div>                                              
-													<div class="profile-upload">
-														<div class="mb-2">
-															<h6 class="mb-1">Upload Profile Image</h6>
-															<p class="fs-12">Image should be below 4 mb</p>
+								<div class="modal-body pb-0 ">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="d-flex align-items-center flex-wrap row-gap-3 bg-light w-100 rounded p-3 mb-4">
+												<div class="d-flex align-items-center justify-content-center avatar avatar-xxl rounded-circle border border-dashed me-2 flex-shrink-0 text-dark frames">
+													<i class="ti ti-photo"></i>
+												</div>
+												<div class="profile-upload">
+													<div class="mb-2">
+														<h6 class="mb-1">Upload Profile Image</h6>
+														<p class="fs-12">Image should be below 4 mb</p>
+													</div>
+													<div class="profile-uploader d-flex align-items-center">
+														<div class="drag-upload-btn btn btn-sm btn-primary me-2">
+															Upload
+															<input type="file" class="form-control image-sign" multiple="">
 														</div>
-														<div class="profile-uploader d-flex align-items-center">
-															<div class="drag-upload-btn btn btn-sm btn-primary me-2">
-																Upload
-																<input type="file" class="form-control image-sign" multiple="">
-															</div>
-															<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
-														</div>
+														<a href="javascript:void(0);" class="btn btn-light btn-sm">Cancel</a>
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">First Name <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control" value="Michael">
-												</div>									
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">First Name <span class="text-danger"> *</span></label>
+												<input type="text" class="form-control" value="Michael">
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Last Name</label>
-													<input type="email" class="form-control" value="Walker">
-												</div>									
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Last Name</label>
+												<input type="email" class="form-control" value="Walker">
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Username <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control" value="Michael Walker">
-												</div>									
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Username <span class="text-danger"> *</span></label>
+												<input type="text" class="form-control" value="Michael Walker">
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Email<span class="text-danger"> *</span></label>
-													<input type="text" class="form-control" value="michael@example.com">
-												</div>									
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Email<span class="text-danger"> *</span></label>
+												<input type="text" class="form-control" value="michael@example.com">
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3 ">
-													<label class="form-label">Password <span class="text-danger"> *</span></label>
-													<div class="pass-group">
-														<input type="password" class="pass-input form-control" value="1234">
-														<span class="ti toggle-password ti-eye-off"></span>
-													</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3 ">
+												<label class="form-label">Password <span class="text-danger"> *</span></label>
+												<div class="pass-group">
+													<input type="password" class="pass-input form-control" value="1234">
+													<span class="ti toggle-password ti-eye-off"></span>
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3 ">
-													<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
-													<div class="pass-group">
-														<input type="password" class="pass-inputs form-control" value="1234">
-														<span class="ti toggle-passwords ti-eye-off"></span>
-													</div>
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3 ">
+												<label class="form-label">Confirm Password <span class="text-danger"> *</span></label>
+												<div class="pass-group">
+													<input type="password" class="pass-inputs form-control" value="1234">
+													<span class="ti toggle-passwords ti-eye-off"></span>
 												</div>
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Phone Number <span class="text-danger"> *</span></label>
-													<input type="text" class="form-control" value="(163) 2459 315">
-												</div>									
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Phone Number <span class="text-danger"> *</span></label>
+												<input type="text" class="form-control" value="(163) 2459 315">
 											</div>
-											<div class="col-md-6">
-												<div class="mb-3">
-													<label class="form-label">Company</label>
-													<input type="text" class="form-control" value="BrightWave Innovations">
-												</div>		
+										</div>
+										<div class="col-md-6">
+											<div class="mb-3">
+												<label class="form-label">Company</label>
+												<input type="text" class="form-control" value="BrightWave Innovations">
 											</div>
 										</div>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
-										<button type="submit" class="btn btn-primary">Save </button>
-									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-outline-light border me-2" data-bs-dismiss="modal">Cancel</button>
+									<button type="submit" class="btn btn-primary">Save </button>
+								</div>
 							</div>
 							<div class="tab-pane fade" id="address2" role="tabpanel" aria-labelledby="address-tab2" tabindex="0">
-								<div class="modal-body pb-0 ">	
+								<div class="modal-body pb-0 ">
 									<div class="card bg-light-500 shadow-none">
 										<div class="card-body d-flex align-items-center justify-content-between flex-wrap row-gap-3">
 											<h6>Enable Options</h6>
 											<div class="d-flex align-items-center justify-content-end">
 												<div class="form-check form-check-md form-switch me-2">
 													<label class="form-check-label mt-0">
-													<input class="form-check-input me-2" type="checkbox" role="switch">
+														<input class="form-check-input me-2" type="checkbox" role="switch">
 														Enable all Module
 													</label>
 												</div>
@@ -1358,7 +858,7 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch" checked>
+																<input class="form-check-input me-2" type="checkbox" role="switch" checked>
 																Holidays
 															</label>
 														</div>
@@ -1416,8 +916,8 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch" checked>
-															Leaves
+																<input class="form-check-input me-2" type="checkbox" role="switch" checked>
+																Leaves
 															</label>
 														</div>
 													</td>
@@ -1474,8 +974,8 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Clients
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Clients
 															</label>
 														</div>
 													</td>
@@ -1532,66 +1032,8 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Projects
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Read
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Write
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Create
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox" checked>
-																Delete
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Import
-															</label>
-														</div>
-													</td>
-													<td>
-														<div class="form-check form-check-md d-flex align-items-center">
-															<label class="form-check-label mt-0">
-																<input class="form-check-input" type="checkbox">
-																Export
-															</label>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<div class="form-check form-check-md form-switch me-2">
-															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Tasks
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Projects
 															</label>
 														</div>
 													</td>
@@ -1648,8 +1090,66 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Chats
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Tasks
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox">
+																Read
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox">
+																Write
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox">
+																Create
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox" checked>
+																Delete
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox">
+																Import
+															</label>
+														</div>
+													</td>
+													<td>
+														<div class="form-check form-check-md d-flex align-items-center">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input" type="checkbox">
+																Export
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="form-check form-check-md form-switch me-2">
+															<label class="form-check-label mt-0">
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Chats
 															</label>
 														</div>
 													</td>
@@ -1706,8 +1206,8 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Assets
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Assets
 															</label>
 														</div>
 													</td>
@@ -1764,8 +1264,8 @@
 													<td>
 														<div class="form-check form-check-md form-switch me-2">
 															<label class="form-check-label mt-0">
-															<input class="form-check-input me-2" type="checkbox" role="switch">
-															Timing Sheets
+																<input class="form-check-input me-2" type="checkbox" role="switch">
+																Timing Sheets
 															</label>
 														</div>
 													</td>
@@ -1883,12 +1383,14 @@
 
 
 
-    </div>
-<!-- end main wrapper-->
-<!-- JAVASCRIPT -->
-<?php include 'layouts/vendor-scripts.php'; ?>
-<!-- Bootstrap Tagsinput JS -->
-<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+	</div>
+	<!-- end main wrapper-->
+	<!-- JAVASCRIPT -->
+	<?php include 'layouts/vendor-scripts.php'; ?>
+	<!-- Bootstrap Tagsinput JS -->
+	<script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+	<script src="assets/js/clients.js"></script>
 
 </body>
+
 </html>

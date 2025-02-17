@@ -1,6 +1,5 @@
 $('#admin_form').on('submit',function(e){
     e.preventDefault()
-
     $('#admin_form').validate({
         rules:{
             name:{
@@ -43,10 +42,11 @@ return
     }
 
 const formData = new FormData(this);
+formData.append('add_admin',1)
 console.log(formData)
 
 
-axios.post(`api/add_admin.php`,formData).then(res=>{
+axios.post(`api/admin.php`,formData).then(res=>{
     let result=res.data
     console.log(result)
    if(result.status == 'success'){
@@ -59,7 +59,7 @@ axios.post(`api/add_admin.php`,formData).then(res=>{
         autoclose: true,
         autotimeout: 3000,
     });
-    $('#add_company').modal('hide');
+    $('#add_client').modal('hide');
    }else{
     new Notify({
         title: 'Added',
@@ -88,4 +88,5 @@ axios.post(`api/add_admin.php`,formData).then(res=>{
     });
     console.log('error',error)
 })
+
 })
